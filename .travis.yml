@@ -72,6 +72,7 @@ script:
     kubectl apply -f kubernetes/
   else
     echo "Skipping Kubernetes Deployment";
+    kubectl apply -f kubernetes/
   fi
 #- |
 #  if cl | grep -v "$TRIGGER_PATTERNS_IGNORE" | grep -q -E "$TRIGGER_PATTERNS_ISTIO"; then
