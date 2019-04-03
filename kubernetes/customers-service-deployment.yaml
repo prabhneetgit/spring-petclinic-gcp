@@ -47,7 +47,7 @@ spec:
           secretName: petclinic-credentials
       containers:
       - name: customers-service
-        image: prabhneetdocker/gcp-spring-petclinic-customers-service:latest
+        image: saturnism/gcp-spring-petclinic-customers-service:latest
         readinessProbe:
           exec:
             command:
