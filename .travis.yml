@@ -43,7 +43,7 @@ script:
   if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     export MAVEN_PROFILE="";
   else
-    CLOUDSDK_CONTAINER_USE_V1_API=false gcloud beta container clusters get-credentials petclinic-cluster --region=us-central1;
+    CLOUDSDK_CONTAINER_USE_V1_API=false gcloud beta container clusters get-credentials petclinic-k8s-cluster --region=us-central1;
     echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     export MAVEN_PROFILE="-PbuildDocker";
   fi
