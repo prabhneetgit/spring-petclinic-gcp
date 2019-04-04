@@ -26,7 +26,7 @@ metadata:
     visualize: 'true'
   name: vets-service
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: vets-service
